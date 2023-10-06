@@ -1,28 +1,31 @@
 #include <stdio.h>
+   
+int main(){
 
-int main() {
-   int valor[10], x = 4, y = 7;
+    int vetor[8], x, y, soma;
 
-   for(int i = 0; i < 8; i++){
-    printf("Digite um numero: ");
-    scanf("%d", &valor[i]);
-   }
-
-   for(int i = 0; i < 10 ; i++){
-    if(valor[i]  % 2 == 0){
-        pares++;
+    for(int i = 0; i < 8; i++){
+        printf("Digite os numeros em vetor[%d]", i);
+        scanf("%d", & vetor[i]);
     }
-   
-   }
 
-   
+    do{
+        printf("Digite o valor x (0 - 7): ");
+        scanf("%d", &x);
+        printf("Digite o valor y (0 - 7): ");
+        scanf("%d", &y);
+            if(x < 0 || x > 7 || y < 7 || y > 7){
+                printf("\nindice valido");
 
-   printf("Quantidade de numeros pares: %d", pares);
- 
+            }
+    }while(x < 0 || x > 7 && y < 7 || y > 7 );
 
+    soma = vetor[x] + vetor[y];
 
-  
-  
+    printf("Soma do indice[%d] + indice[%d] = %d", x, y, soma);
+    
 
-   return 0;
+    
+
+    return 0;
 }
