@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 int main() {
-   int valor[5], maior, menor, soma = 0, media;
+   int valor[5], maior = 0, menor = 0, soma = 0, media;
 
-   maior = valor[0];
-   menor = valor[0];
+   
 
    for(int i = 0; i < 5; i++){
     printf("Digite um valor: ");
@@ -12,6 +11,9 @@ int main() {
 
     soma += valor[i];
    }
+
+   maior = valor[0];
+   menor = valor[0];
 
    for(int i = 0; i < 5; i++){
     printf("%d\n", valor[i]);
