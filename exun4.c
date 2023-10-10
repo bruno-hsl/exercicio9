@@ -1,31 +1,34 @@
 #include <stdio.h>
-   
-int main(){
 
-    int vetor[8], x, y, soma;
+main(){
+
+    int vetor[8], x, y, soma = 0;
 
     for(int i = 0; i < 8; i++){
-        printf("Digite os numeros em vetor[%d]", i);
-        scanf("%d", & vetor[i]);
+        printf("\nDigite o numero em vetor[%d]", i);
+        scanf("%d", &vetor[i]);
     }
 
     do{
-        printf("Digite o valor x (0 - 7): ");
-        scanf("%d", &x);
-        printf("Digite o valor y (0 - 7): ");
-        scanf("%d", &y);
-            if(x < 0 || x > 7 || y < 7 || y > 7){
-                printf("\nindice valido");
+        printf("Digite o valor de x (0 - 7): ");
+        scanf("%d", &x); 
+        printf("Digite o valor de y (0 - 7): ");
+        scanf("%d", &y); 
+        if(x < 0 || x > 7 || y < 0 || y > 7 ){
+            printf("indice invalido");
+        }
 
-            }
-    }while(x < 0 || x > 7 && y < 7 || y > 7 );
+    }while(x < 0 || x > 7 || y < 0 || y > 7);
 
-    soma = vetor[x] + vetor[y];
+    for(int i = 0; i < 8; i++ ){
+        if(i == x){
+            soma += vetor[i];
+        }
+        if(i == y){
+             soma += vetor[i];
+        }
+    }
 
-    printf("Soma do indice[%d] + indice[%d] = %d", x, y, soma);
-    
+     printf("Soma do indice[%d] + indice[%d] = %d", x, y, soma);
 
-    
-
-    return 0;
 }
