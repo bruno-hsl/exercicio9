@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main() {
-   int valor[5], maior = 0, menor = 0, soma = 0, media;
+   int valor[5], maior = 0, menor = 0, soma = 0;
+   float media;
 
    
 
@@ -33,7 +34,7 @@ int main() {
 
    printf("Maior valor: %d\n", maior);
    printf("Menor valor: %d\n", menor);
-   printf("Media: %d\n", media);
+   printf("Media: %f\n", media);
 
    return 0;
 }
