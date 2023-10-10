@@ -1,14 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int A[6] = {1, 0, 5, -2, -5, 7};
-    int soma;
+main(){
 
-    soma = A[0] + A[1] + A[5];
-    A[4] = 100;
+    int a[6] = {1, 0, 5, -2, -5, 7}, soma = 0;
 
-    printf("Soma: %d\n", soma);
-    printf("Mudar valor da posição 4 para 100: %d\n", A[4]);
+    for(int i = 0; i < 6; i++){
+        if(i == 0 || i == 1 || i == 5){
+            soma += a[i];
+        }
+        if(i == 4){
+            a[i] = 100;
+        }
+    }
 
-    return 0;
+    for(int i = 0; i < 6; i++){
+        printf("\n%d", a[i]);
+    }
+
+    printf("\nSoma:%d ", soma);
+
 }
