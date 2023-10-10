@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-   int valor[10], qtdnegativos = 0, qtdpositivos = 0, media, positivos = 0;
+   int valor[10], qtdnegativos = 0, qtdpositivos = 0, soma, positivos = 0;
 
    for(int i = 0; i < 10; i++){
     printf("Digite um numero negativo ou positivo: ");
@@ -18,10 +18,10 @@ int main() {
     }
    }
 
-   media = positivos / qtdpositivos;
+   soma = positivos;
 
    printf("Quantidade de numeros negativos: %d", qtdnegativos);
-   printf("\nmedia numeros positivos: %d", media);
+   printf("\nsoma numeros positivos: %d", soma);
 
 
   
